@@ -1,1 +1,15 @@
+#so we have true this true so the IP addess of the server should be used in the preference of the hostname
+#register with eureka also true so this service get registered with eureka 
 
+spring: 
+  application:
+    name: Config-Dev 
+    
+eureka:
+  instance:
+    prefer-ip-address: true 
+  client:
+    fetch-registry:  true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka 
